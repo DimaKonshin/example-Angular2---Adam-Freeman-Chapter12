@@ -1,5 +1,5 @@
-﻿<div [ngClass] ="'p-a-1 ' + getClasses()"
-     [textContent]="'Name: ' + (model.getProduct(1)?.name || 'None')">  
+﻿<div [ngClass] ="'p-a-1 ' + getClasses()">
+     Name: {{model.getProduct(1)?.name || 'None'}} 
 </div>
 <div class="form-group m-t-1">
     <label>Name:</label>
