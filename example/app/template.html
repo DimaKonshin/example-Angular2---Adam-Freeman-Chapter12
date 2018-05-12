@@ -22,9 +22,8 @@
     </table>
 </div>
 <div class="p-a-1"
-     [class.bg-success] ="CheckExpression(2)"
-     [class.bg-info] ="!CheckExpression(2)"
-     >
+     [class.bg-success]="CheckExpression(2)"
+     [class.bg-info]="!CheckExpression(2)">
     The second product is {{getNameOfProduct(1)}}
 </div>
 <div class="p-a-1" [ngClass]="getClassMap(1)">
@@ -41,4 +40,10 @@
 </div>
 <div class="p-a-1 bg-info">
     The <span [style.fontSize.px]="fontSizeWithoutUnits">second</span> product is {{getNameOfProduct(2)}}
+</div>
+<div class="p-a-1 bg-warning">
+    The <span [ngStyle]="getStyles(1)">first</span> product is {{getNameOfProduct(1)}}
+</div>
+<div class="p-a-1 bg-info">
+    The <span [ngStyle]="getStyles(2)">second</span> product is {{getNameOfProduct(2)}}
 </div>

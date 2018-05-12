@@ -37,6 +37,14 @@ var ProductComponent = (function () {
             "bg-info": product.price < 50
         };
     };
+    ProductComponent.prototype.getStyles = function (key) {
+        var product = this.model.getProduct(key);
+        return {
+            fontSize: "30px",
+            "margin.px": 100,
+            color: product.price > 50 ? "red" : "green"
+        };
+    };
     ProductComponent = __decorate([
         core_1.Component({
             selector: "app",

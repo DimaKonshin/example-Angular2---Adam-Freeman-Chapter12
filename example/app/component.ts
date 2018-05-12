@@ -40,4 +40,13 @@ export class ProductComponent {
 
     fontSizeWithUnits: string = "30px";
     fontSizeWithoutUnits: string = "30";
+
+    getStyles(key: number) {
+        let product = this.model.getProduct(key);
+        return{
+            fontSize: "30px",
+            "margin.px": 100,
+            color: product.price > 50 ? "red" : "green"
+        }
+    }
 }
