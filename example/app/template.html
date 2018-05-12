@@ -4,4 +4,5 @@
 <div class="form-group m-t-1">
     <label>Name:</label>
     <input class="form-control" [value] ="model.getProduct(6)?.name || 'None'" />
+    <p class="m-t-1">The first product is {{model.getProduct(1)?.name || 'None'}}</p>
 </div>
