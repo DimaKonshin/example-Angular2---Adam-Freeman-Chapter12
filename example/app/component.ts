@@ -9,8 +9,9 @@ import { Product } from "./product.model";
 export class ProductComponent {
     model: Model = new Model();
 
-    getClasses(): string {
-        return this.model.getProducts().length == 5 ? "bg-success" : "bg-warning";
+    getClasses(id: number): string {
+        let product = this.model.getProduct(id);
+        return "p-a-1 " + (product.price < 50 ? "bg-info" : "bg-warning");
     }
 
     getNameOfProduct(id: number) {

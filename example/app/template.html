@@ -1,10 +1,11 @@
-﻿<div [ngClass]="'p-a-1 ' + getClasses()">
+﻿<div class="p-a-1 bg-success">
     Name: {{getNameOfProduct(1)}}
 </div>
 <div class="form-group m-t-1">
     <label>Name:</label>
-    <input class="form-control" [value] ="getNameOfProduct(6)" />
-    <p class="m-t-1">The first product is {{getNameOfProduct(1)}}</p>
+    <input class="form-control" [value]="getNameOfProduct(6)" />
+    <p [class]="getClasses(1)">The first product is {{getNameOfProduct(1)}}</p>
+    <p [class]="getClasses(2)">The second product is {{getNameOfProduct(2)}}</p>
 </div>
 <div>
     <table class="table table-sm table-bordered table-striped m-t-1">

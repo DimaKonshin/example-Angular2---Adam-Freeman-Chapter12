@@ -14,8 +14,9 @@ var ProductComponent = (function () {
     function ProductComponent() {
         this.model = new repository_model_1.Model();
     }
-    ProductComponent.prototype.getClasses = function () {
-        return this.model.getProducts().length == 5 ? "bg-success" : "bg-warning";
+    ProductComponent.prototype.getClasses = function (id) {
+        var product = this.model.getProduct(id);
+        return "p-a-1 " + (product.price < 50 ? "bg-info" : "bg-warning");
     };
     ProductComponent.prototype.getNameOfProduct = function (id) {
         var product = this.model.getProduct(id);
