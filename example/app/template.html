@@ -1,10 +1,10 @@
-﻿<div [ngClass] ="'p-a-1 ' + getClasses()">
-     Name: {{model.getProduct(1)?.name || 'None'}} 
+﻿<div [ngClass]="'p-a-1 ' + getClasses()">
+    Name: {{getNameOfProduct(1)}}
 </div>
 <div class="form-group m-t-1">
     <label>Name:</label>
-    <input class="form-control" [value] ="model.getProduct(6)?.name || 'None'" />
-    <p class="m-t-1">The first product is {{model.getProduct(1)?.name || 'None'}}</p>
+    <input class="form-control" [value] ="getNameOfProduct(6)" />
+    <p class="m-t-1">The first product is {{getNameOfProduct(1)}}</p>
 </div>
 <div>
     <table class="table table-sm table-bordered table-striped m-t-1">
@@ -16,7 +16,7 @@
             <th>5</th>
         </tr>
         <tr>
-            <td [attr.colspan] ="model.getProducts().length">{{model.getProduct(1)?.name || 'None'}}</td>
+            <td [attr.colspan]="model.getProducts().length">{{getNameOfProduct(1)}}</td>
         </tr>
     </table>
 </div>

@@ -17,6 +17,10 @@ var ProductComponent = (function () {
     ProductComponent.prototype.getClasses = function () {
         return this.model.getProducts().length == 5 ? "bg-success" : "bg-warning";
     };
+    ProductComponent.prototype.getNameOfProduct = function (id) {
+        var product = this.model.getProduct(id);
+        return product != null ? product.name : "None";
+    };
     ProductComponent = __decorate([
         core_1.Component({
             selector: "app",
