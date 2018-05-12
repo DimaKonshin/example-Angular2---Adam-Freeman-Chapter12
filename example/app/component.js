@@ -13,6 +13,8 @@ var repository_model_1 = require("./repository.model");
 var ProductComponent = (function () {
     function ProductComponent() {
         this.model = new repository_model_1.Model();
+        this.fontSizeWithUnits = "30px";
+        this.fontSizeWithoutUnits = "30";
     }
     ProductComponent.prototype.getClasses = function (id) {
         var product = this.model.getProduct(id);

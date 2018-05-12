@@ -36,3 +36,9 @@
 <div class="p-a-1" [ngClass]="{'bg-success':model.getProduct(3).price < 50,'bg-info' : model.getProduct(3).price>=50 }">
     The third product is {{getNameOfProduct(3)}}
 </div>
+<div class="p-a-1 bg-warning">
+    The <span [style.fontSize]="fontSizeWithUnits">first</span> product is {{getNameOfProduct(1)}}
+</div>
+<div class="p-a-1 bg-info">
+    The <span [style.fontSize.px]="fontSizeWithoutUnits">second</span> product is {{getNameOfProduct(2)}}
+</div>
