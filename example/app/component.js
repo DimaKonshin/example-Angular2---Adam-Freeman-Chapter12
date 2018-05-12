@@ -22,6 +22,12 @@ var ProductComponent = (function () {
         var product = this.model.getProduct(id);
         return product != null ? product.name : "None";
     };
+    ProductComponent.prototype.CheckExpression = function (id) {
+        if (this.model.getProduct(id).price < 50)
+            return true;
+        else if (this.model.getProduct(id).price >= 50)
+            return false;
+    };
     ProductComponent = __decorate([
         core_1.Component({
             selector: "app",

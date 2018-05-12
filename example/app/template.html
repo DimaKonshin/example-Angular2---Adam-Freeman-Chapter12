@@ -22,8 +22,8 @@
     </table>
 </div>
 <div class="p-a-1"
-     [class.bg-success] ="model.getProduct(2).price < 50"
-     [class.bg-info] ="model.getProduct(2).price >= 50"
+     [class.bg-success] ="CheckExpression(2)"
+     [class.bg-info] ="!CheckExpression(2)"
      >
-    The second product is {{getNameOfProduct(2)}}
+    The second product is {{getNameOfProduct(1)}}
 </div>

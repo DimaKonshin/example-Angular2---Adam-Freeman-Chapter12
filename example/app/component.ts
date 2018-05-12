@@ -20,4 +20,12 @@ export class ProductComponent {
 
         return product != null ? product.name : "None";
     }
+
+    CheckExpression(id: number): boolean {
+        if (this.model.getProduct(id).price < 50)
+            return true;
+        else if (this.model.getProduct(id).price >= 50)
+            return false;
+    }
+    
 }
