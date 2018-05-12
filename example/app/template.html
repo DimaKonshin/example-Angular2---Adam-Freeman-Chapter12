@@ -27,3 +27,12 @@
      >
     The second product is {{getNameOfProduct(1)}}
 </div>
+<div class="p-a-1" [ngClass]="getClassMap(1)">
+    The first product is {{getNameOfProduct(1)}}
+</div>
+<div class="p-a-1" [ngClass]="getClassMap(2)">
+    The second product is {{getNameOfProduct(2)}}
+</div>
+<div class="p-a-1" [ngClass]="{'bg-success':model.getProduct(3).price < 50,'bg-info' : model.getProduct(3).price>=50 }">
+    The third product is {{getNameOfProduct(3)}}
+</div>

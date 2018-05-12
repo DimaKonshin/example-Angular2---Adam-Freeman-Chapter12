@@ -27,5 +27,15 @@ export class ProductComponent {
         else if (this.model.getProduct(id).price >= 50)
             return false;
     }
+
+    getClassMap(key: number): Object {
+
+        let product = this.model.getProduct(key);
+
+        return {
+            "text-xs-center bg-danger": product.name == "Kayak",
+            "bg-info": product.price < 50
+        };
+    }
     
 }

@@ -28,6 +28,13 @@ var ProductComponent = (function () {
         else if (this.model.getProduct(id).price >= 50)
             return false;
     };
+    ProductComponent.prototype.getClassMap = function (key) {
+        var product = this.model.getProduct(key);
+        return {
+            "text-xs-center bg-danger": product.name == "Kayak",
+            "bg-info": product.price < 50
+        };
+    };
     ProductComponent = __decorate([
         core_1.Component({
             selector: "app",
